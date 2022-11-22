@@ -1,0 +1,257 @@
+:root {
+    --background: white;
+    --maintext: black;
+    --headergreen: rgb(42, 153, 147);
+  }
+
+
+  * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  body {
+    line-height: 1.5;
+    color: var(--maintext);
+    background-color: var(--background);
+  }
+  
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 0.625rem;
+    color: var(--headergreen);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+ 
+  h2 {font-size: 3.5rem;}
+  h3 {font-size: 3rem;}
+  h4 {font-size: 2.5rem;}
+  h5 {font-size: 2rem;}
+  h6 {font-size: 1.5rem;}
+
+/* Header */
+
+  header {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1% 2% 1% 0%;
+      background-color: #241f25;
+    }
+  
+  header h1 {
+      display: flex; 
+      padding: 0.5%;
+      font-size: 3rem;
+      background-color: var(--headergreen);
+      color: var(--maintext)
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      padding: 1%;
+    }
+  
+  nav ul li {
+      text-decoration: none;
+      padding: 1%;      
+    }
+  
+
+    nav a {
+        color: var(--headergreen);
+        font-weight: bold;
+        text-decoration-line: underline;
+        font-size: 1.5rem;;
+      }
+      
+    nav a:hover {
+        color: #fff;
+      }
+
+    
+/* Hero */
+
+.container {
+  position: relative;
+}
+
+  .text-block {
+    position: absolute;
+    justify-content: center;
+    bottom: 80px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+ 
+/* Main */
+  
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  
+}
+
+.flex-item-left {
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+  border-right: 10px;
+  border-color: var(--headergreen);
+  border-style: double;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  flex: 25%;
+  min-height: 200px;
+  padding: 10px;
+}
+
+.flex-item-right {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 75%;
+  min-height: 200px;
+  padding: 10px;
+}
+
+
+.myfirstnewimage {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 1%;
+  
+}
+
+.mynewimage {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 50%;
+  padding: 1%;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  word-wrap: normal;
+  
+}
+
+.flex-item-right section img {
+  width: 50%;
+  border: 10px;
+  border-color: var(--headergreen);opacity: 100%;;
+  border-style: solid;opacity: 100%;
+  opacity: 30%;
+  height: 300px;
+  margin: 1%;
+}
+
+.flex-item-right section img:first-child {
+  width: 100%;
+  height: 600px
+}
+
+.flex-item-right section p {
+  display: inline-block;
+  
+  position:absolute;
+  background-color: var(--headergreen);opacity: 100%;;
+  color: var(--maintext);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.flex-item-right section img:hover {
+  opacity: 100%;
+}
+
+.picture-text section p:hover {
+  opacity: 100%;
+}
+
+
+
+
+a {
+  padding: 0px 50px;
+}
+
+  footer {
+    margin: 1.5rem;
+    text-align: center;
+  }
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+  .flex-item-left {
+      justify-content: center;
+      display: inline-block;
+    }
+  
+  }
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+  .column {
+    width: 100%;
+  }
+
+  .flex-item-left {
+    justify-content: center;
+    display: inline-block;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-color: var(--headergreen);
+    border-style: double;
+    min-height: 50px;
+  }
+
+  .flex-item-right {
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 10px;
+    border-right: 0px;
+    border-color: var(--headergreen);
+    border-style: double;
+    min-height: 50px;
+  }
+
+  
+  .mynewimage {
+    width: 100%;
+   
+  }
+
+  .flex-item img {
+    width: 100%;
+    border: 10px;
+    border-color: var(--headergreen);opacity: 100%;;
+    border-style: solid;
+    opacity: 30%;
+    background-color: black;
+    height: 300px;
+    padding: 0px;
+    margin: 1%;
+    
+  }
+
+}
